@@ -1,8 +1,8 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "longman scraper",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
+  "description": "this extention extract longman",
   "homepage_url": "http://extensionizr.com",
   "icons": {
     "16": "icons/icon16.png",
@@ -25,7 +25,7 @@
   "content_scripts":[
     {
       "matches":[
-        "https://*/*"
+        "https://www.ldoceonline.com/*/*"
       ],
       "js":[
         "src/content/content.js"
@@ -35,13 +35,15 @@
   "externally_connectable":{
     "matches":[
 
-      "*://localhost/*"
+      "*://localhost/*",
+      "https://www.ldoceonline.com/*/*"
       
     ]
   },
   "permissions": [
     "geolocation",
     "history",
-    "tabs"
+    "tabs",
+    "storage"
   ]
 }

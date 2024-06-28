@@ -21,17 +21,35 @@
 </head>
 <body>
 
- 
+ <style>
+	#main{
+  display:flex;
+  flex-direction:flex-col;
+  
+}
+#btn{
+  padding:4px 10px ;
+  margin:3px 5px;
+  font-size:36px;
+  background-color:white;
+  
+}
+ </style>
 <script src="./popp.js"></script>
-	
-<div id="mainPopup">
-<h1>Hello extensionizr!</h1>
-<p>To shut this popup down, edit the manifest file and remove the "default popup" key. To edit it, just edit ext/browser_action/browser_action.html. The CSS is there, too.</p>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <textarea name="note" id="note" cols="30" rows="3">
-	note 
-	</textarea>
-	<button id="btn">save</button>
+<div id="mainPopup">
+ 
+
+  <!-- <textarea name="note" id="note" cols="30" rows="3">
+	
+	</textarea> -->
+	<h1>words : <span id="words"></span></h1>
+	<button id="btn">extract</button>
+	<button id="updateBTN">SYNC</button>
+	<button id="logBTN">LOG</button>
+	<button id="clearBTN">Clear</button>
+	<!-- <button id="extract-btn">extract</button> -->
 </div>
 </body>
 </html>
